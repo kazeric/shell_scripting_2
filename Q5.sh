@@ -21,7 +21,6 @@ fi
 
 # Convert .bmp files to .jpeg files
 for bmp_file in "${bmp_files[@]}"; do
-  jpeg_file="${bmp_file%.*}.jpeg"  # Replace the extension with .jpeg
   convert "$bmp_file" "$jpeg_file"
   rm $bmp_file
 done
